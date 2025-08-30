@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: movie-now-playing-app
+    plan: free
+    envVars:
+      - key: JAVA_VERSION
+        value: 17
+    buildCommand: mvn clean package -DskipTests
+    startCommand: java -jar target/*.jar
